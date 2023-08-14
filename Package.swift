@@ -10,8 +10,15 @@ let package = Package(
     ],
     products: [
         .library(name: "App", targets: ["App"]),
+        .library(name: "Common", targets: ["Common"]),
+        .library(name: "Profile", targets: ["Profile"])
+    ],
+    dependencies: [
+        .package(url: "https://github.com/SwiftGen/SwiftGenPlugin", from: "6.6.0")
     ],
     targets: [
-        .target(name: "App"),
+        .target(name: "App", dependencies: ["Common", "Profile"]),
+        .target(name: "Common", plugins: [.plugin(name: "SwiftGenPlugin", package: "SwiftGenPlugin")]),
+        .target(name: "Profile")
     ]
 )

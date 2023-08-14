@@ -1,0 +1,12 @@
+input_dir: Sources/Common
+output_dir: ${DERIVED_SOURCES_DIR}
+
+xcassets:
+  inputs:
+    - Assets.xcassets
+    - Colors.xcassets
+  outputs:
+     - templateName: swift5
+       output: Assets.swift
+       params:
+           publicAccess: true
