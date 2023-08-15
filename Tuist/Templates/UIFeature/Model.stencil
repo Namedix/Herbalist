@@ -1,0 +1,13 @@
+import Combine
+
+public final class {{ name }}Model: ObservableObject {
+
+    // MARK: - Properties
+
+    // MARK: - Initialization
+
+    public init() {}
+
+    // MARK: - Methods
+
+}

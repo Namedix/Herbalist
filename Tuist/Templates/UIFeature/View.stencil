@@ -1,0 +1,26 @@
+import SwiftUI
+
+public struct {{ name }}View: View {
+
+    // MARK: - Properties
+
+    @ObservedObject var model: {{ name}}Model
+
+    // MARK: - Initialization
+
+    public init(model: {{ name}}Model) {
+        self.model = model
+    }
+
+    // MARK: - View
+
+    public var body: some View {
+        Text("{{ name }}")
+    }
+}
+
+struct {{ name }}View_Previews: PreviewProvider {
+    static var previews: some View {
+        {{ name }}View(model: .init())
+    }
+}
