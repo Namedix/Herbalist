@@ -1,4 +1,5 @@
 import SwiftUI
+import Common
 
 public struct ProfileView: View {
 
@@ -15,7 +16,14 @@ public struct ProfileView: View {
     // MARK: - View
 
     public var body: some View {
-        Text("Profile")
+        VStack {
+            ZStack {
+                CommonAsset.Assets.profileBannerImage.swiftUIImage
+                    .edgesIgnoringSafeArea(.all)
+                Text("Profile")
+            }
+            Spacer()
+        }
     }
 }
 
